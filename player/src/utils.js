@@ -155,7 +155,7 @@ const loadBg = (index, forced) => {
   var img = new Image();
   //background.src = "./data/slides/" + index + ".jpg";
   let bgImg;
-  if (slideList[index + 1].u) img.src = slideList[index + 1].u.substring(1);
+  if (slideList[index + 1].u) img.src = slideList[index + 1].u;
   else if (slideList[index + 1].bg) {
     bgImg = slideList[index + 1].bg.substring(1);
     img.src = bgImg;
