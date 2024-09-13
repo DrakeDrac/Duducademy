@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duducademy: One place for everthing</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.png" type="image/png" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+
+        <a
+          href="./index.html"
+          class="logo"
+          style="flex-direction: row; display: flex; align-items: center"
+        >
+          <img src="./favicon.png" width="35" alt="Filmlane logo" />
+          <span
+            style="
+              padding-left: 15px;
+              font-size: 25px;
+              color: white;
+              font-weight: bold;
+            "
+          >
+            Duducademy
+          </span>
+        </a>
+
+        <div class="header-actions">
+          <a href="./search.html" class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </a>
+        </div>
+
+        <button class="menu-open-btn" data-menu-open-btn>
+          <ion-icon name="reorder-two"></ion-icon>
+        </button>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="./index.html" class="logo">
+              <img src="./assets/images/logo.svg" alt="Filmlane logo" />
+            </a>
+
+            <button class="menu-close-btn" data-menu-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="./index.html" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Educators</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Courses</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Batches</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">About</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-social-list">
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="h1 hero-title">
+                Many <strong>Courses</strong>, Batches, & More.
+              </h1>
+
+              <div class="meta-wrapper">
+                <div class="badge-wrapper">
+                  <div class="badge badge-fill">hehe</div>
+
+                  <div class="badge badge-outline">HD</div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary">
+                <span>Browse All</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #UPCOMING
+      -->
+
+        <section class="upcoming">
+          <div class="container">
+            <p class="section-subtitle">gu gu ga ga</p>
+            <div class="flex-wrapper">
+              <div class="title-wrapper">
+                <h2 class="h2 section-title">Recently Added</h2>
+              </div>
+
+              <ul class="filter-list">
+                <li>
+                  <button class="filter-btn">Mathematics</button>
+                </li>
+
+                <li>
+                  <button class="filter-btn">Physics</button>
+                </li>
+
+                <li>
+                  <button class="filter-btn">Chemistry</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul id="recentlyadded" class="movies-list has-scrollbar"></ul>
+          </div>
+        </section>
+
+        <!-- 
+        - #TOP RATED
+      -->
+
+        <section class="top-rated">
+          <div class="container">
+            <p class="section-subtitle">gu gu ga ga</p>
+
+            <h2 class="h2 section-title">Popular Courses</h2>
+
+            <ul id="popularcourses" class="filter-list"></ul>
+
+            <ul class="movies-list"></ul>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #GO TO TOP
+  -->
+
+    <a href="#top" class="go-top" data-go-top>
+      <ion-icon name="chevron-up"></ion-icon>
+    </a>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+    <script>
+      function bytesToArrayBuffer(heheee) {
+        var bytes = new Uint8Array(heheee.length);
+        for (var i = 0; i < heheee.length; i++) {
+          bytes[i] = heheee.charCodeAt(i);
+        }
+        return bytes.buffer;
+      }
+      function truncateString(str, num) {
+        if (str.length > num) {
+          return str.slice(0, num) + "...";
+        } else {
+          return str;
+        }
+      }
+      fetch("./data/courses.json")
+        .then((r) => r.json())
+        .then((r) => {
+          console.log(r);
+          for (let index = 0; index < r.length / 2; index++) {
+            const element = r[index];
+            let template = `<li>
+                  <div class="movie-card" style="width: auto;">
+                    <a href="./course.html?id=${element.uid}">
+                      <figure class="card-banner">
+                        <img
+                        src="./authors/${element.author_username}.png"
+                        />
+                      </figure>
+                    </a>
+
+                    <div class="title-wrapper">
+                      <a href="./course.html?id=${element.uid}">
+                        <h3 class="card-title">${element.name}</h3>
+                      </a>
+                    </div>
+                  </div>
+                </li>`;
+            document.getElementById("recentlyadded").innerHTML += template;
+          }
+          for (
+            let index = Math.round(r.length / 2);
+            index < r.length;
+            index++
+          ) {
+            const element = r[index];
+            console.log(r[index], index);
+            try {
+              let template = `<li>
+                    <div class="movie-card" style="width: auto;">
+                      <a href="./course.html?id=${element.uid}">
+                        <figure class="card-banner">
+                          <img
+                          src="./authors/${element.author_username}.png"
+                          />
+                        </figure>
+                      </a>
+  
+                      <div class="title-wrapper">
+                        <a href="./course.html?id=${element.uid}">
+                          <h3 class="card-title">${element.name}</h3>
+                        </a>
+                      </div>
+                    </div>
+                  </li>`;
+              document.getElementById("popularcourses").innerHTML += template;
+            } catch (error) {
+              console.log(error);
+            }
+          }
+        });
+    </script>
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

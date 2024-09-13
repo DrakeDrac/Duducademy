@@ -1,0 +1,186 @@
+{
+  "name": "INPHO: Course on Centre of Mass & Conservation of Linear Momentum for JEE 2023",
+  "uid": "0FECWPVK",
+  "description": "In this course, Nitin Sachan will provide in-depth knowledge of COM. The course will be helpful for aspirants preparing for IIT JEE. Learners at any stage of their preparation will be benefited from the course. All doubts related to the topic will be clarified during the doubt clearing sessions in the course. Class dates and timings along with topic details are given below. The course will be covered in Hindi and the notes will be provided in English.",
+  "lessons": {
+    "results": [
+      {
+        "rank": 1,
+        "value": {
+          "uid": "VFAQCUEW",
+          "description": "",
+          "title": "Concept of Centre of Mass - I",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 2,
+        "value": {
+          "uid": "6NZOAKAJ",
+          "description": "",
+          "title": "Concept of Centre of Mass - II",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 3,
+        "value": {
+          "uid": "9CB98PGE",
+          "description": "",
+          "title": "Concept of Centre of Mass - III",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 4,
+        "value": {
+          "uid": "XHZDIVSG",
+          "description": "",
+          "title": "Doubt Clearing Session",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 5,
+        "value": {
+          "uid": "MCIAKU7R",
+          "description": "",
+          "title": "Motion of Centre of Mass - II",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 6,
+        "value": {
+          "uid": "G6ZJA9BU",
+          "description": "",
+          "title": "Conservation of Momentum - I",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 7,
+        "value": {
+          "uid": "AOY9JD6Q",
+          "description": "",
+          "title": "Doubt Clearing Session",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 8,
+        "value": {
+          "uid": "21UD03FY",
+          "description": "",
+          "title": "Motion of Centre of Mass - I",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 9,
+        "value": {
+          "uid": "L82SYL51",
+          "description": "",
+          "title": "Conservation of Momentum - II",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 10,
+        "value": {
+          "uid": "PU18K6HN",
+          "description": "",
+          "title": "Conservation of Momentum - III",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 11,
+        "value": {
+          "uid": "KZZQTXJ0",
+          "description": "",
+          "title": "Doubt Clearing Session",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 12,
+        "value": {
+          "uid": "9J6PDF1I",
+          "description": "",
+          "title": "Collisions - I",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 13,
+        "value": {
+          "uid": "KZNFIJE6",
+          "description": "",
+          "title": "Doubt Clearing Session",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 14,
+        "value": {
+          "uid": "8N4R6GDG",
+          "description": "",
+          "title": "Variable Mass Systems - I",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 15,
+        "value": {
+          "uid": "VS8FV73O",
+          "description": "",
+          "title": "Collisions - II",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 16,
+        "value": {
+          "uid": "7MRN61MU",
+          "description": "",
+          "title": "Collisions - III",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 17,
+        "value": {
+          "uid": "4RY1M0RI",
+          "description": "",
+          "title": "Collisions - IV",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 18,
+        "value": {
+          "uid": "B6JX9OVCHY",
+          "description": "",
+          "title": "Mega Quiz",
+          "seconds_before_live": "2023-06-08T04:30:00Z"
+        }
+      },
+      {
+        "rank": 19,
+        "value": {
+          "uid": "BYUGLHHH",
+          "description": "",
+          "title": "Variable Mass Systems - II & Doubt Clearing Session",
+          "seconds_before_live": 0
+        }
+      }
+    ]
+  },
+  "author": {
+    "username": "nitinsachan.iitm-2544",
+    "bio": "",
+    "first_name": "Nitin",
+    "last_name": "Sachan"
+  }
+}

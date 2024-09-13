@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>moj</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"></script>
+    <script>
+      function resizeIframe(obj) {
+        /*obj.style.height =
+          window.innerHeight > window.innerWidth
+            ? window.innerWidth / 1.6 + "px"
+            : window.innerHeight + "px";*/
+        obj.style.height = window.innerWidth / 1.6 + "px";
+      }
+      window.addEventListener("resize", () => {
+        resizeIframe(document.getElementById("iframe"));
+      });
+    </script>
+  </head>
+
+  <body id="#top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+
+        <a
+          href="./index.html"
+          class="logo"
+          style="flex-direction: row; display: flex; align-items: center"
+        >
+          <img src="./favicon.png" width="35" alt="Filmlane logo" />
+          <span
+            style="
+              padding-left: 15px;
+              font-size: 25px;
+              color: white;
+              font-weight: bold;
+            "
+          >
+            Duducademy
+          </span>
+        </a>
+
+        <div class="header-actions">
+          <a href="./search.html" class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </a>
+        </div>
+
+        <button class="menu-open-btn" data-menu-open-btn>
+          <ion-icon name="reorder-two"></ion-icon>
+        </button>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="./index.html" class="logo">
+              <img src="./assets/images/logo.svg" alt="Filmlane logo" />
+            </a>
+
+            <button class="menu-close-btn" data-menu-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="./index.html" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Educators</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Courses</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Batches</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">About</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-social-list">
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #MOVIE DETAIL
+      -->
+
+        <section class="movie-detail">
+          <div class="container">
+            <!-- <figure class="movie-detail-banner">
+              <img id="thumbnail" src="./assets/images/movie-4.png" />
+
+              <button onclick="play()" class="play-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </button>
+            </figure> -->
+            <iframe
+              width="100%"
+              onload="iframeInit()"
+              src="./player/index.html"
+              frameborder="0"
+              scrolling="no"
+              id="iframe"
+            ></iframe>
+
+            <div class="movie-detail-content">
+              <p id="educator" class="detail-subtitle"></p>
+
+              <h1
+                id="course_name"
+                class="h1 detail-title"
+                style="font-size: 35px"
+              ></h1>
+
+              <p id="desc" class="storyline"></p>
+              <div id="lessons"></div>
+            </div>
+          </div>
+        </section>
+
+    <!-- 
+    - #GO TO TOP
+  -->
+
+    <a href="#top" class="go-top" data-go-top>
+      <ion-icon name="chevron-up"></ion-icon>
+    </a>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      let uid = urlParams.get("id") || "0NURS7S4";
+      let lesson = urlParams.get("lesson") || 1;
+      let lessons = [];
+      function play() {
+        console.log("playing ", lessons[lesson - 1]);
+      }
+      function loadLesson(i) {
+        window.open(`./course.html?id=${uid}&lesson=${i}`, "_self");
+      }
+      fetch("./courses/" + uid + ".json")
+        .then((r) => r.json())
+        .then((r) => {
+          document.getElementById("educator").innerHTML =
+            r.author.first_name + " " + r.author.last_name;
+          document.getElementById("course_name").innerHTML = r.name;
+          document.title = r.name;
+          document.getElementById("desc").innerHTML = r.description;
+          let lessons_ui = document.getElementById("lessons");
+          r.lessons.results.forEach((element) => {
+            lessons.push(element);
+            let time = "";
+            try {
+              time = element.value.time.split("T")[0];
+            } catch {}
+            lessons_ui.innerHTML += `<div class="details-actions">
+                  <div class="title-wrapper">
+                    <p class="title">${element.rank}. ${element.value.title}</p>
+
+                    <p class="text">${time}</p>
+                  </div>
+
+                  <button onclick="loadLesson(${element.rank})" class="btn btn-primary">
+                    <ion-icon name="play"></ion-icon>
+                  </button>
+                </div>`;
+          });
+        });
+      function getIframeWindow(iframe_object) {
+        var doc;
+
+        if (iframe_object.contentWindow) {
+          return iframe_object.contentWindow;
+        }
+
+        if (iframe_object.window) {
+          return iframe_object.window;
+        }
+
+        if (!doc && iframe_object.contentDocument) {
+          doc = iframe_object.contentDocument;
+        }
+
+        if (!doc && iframe_object.document) {
+          doc = iframe_object.document;
+        }
+
+        if (doc && doc.defaultView) {
+          return doc.defaultView;
+        }
+
+        if (doc && doc.parentWindow) {
+          return doc.parentWindow;
+        }
+
+        return undefined;
+      }
+      let countt = 0;
+      async function fetchProxy(
+        url,
+        callback,
+        fallback_url,
+        fallback_callback
+      ) {
+        return await fetch("https://corsproxy.io/?" + url)
+          .then((r) => r.text())
+          .then((r) => {
+            return callback(r);
+          })
+          .catch(async (e) => {
+            console.log(e);
+
+            return await fetch("https://corsproxy.org/?" + url)
+              .then((r) => r.text())
+              .then((r) => {
+                return callback(r);
+              })
+              .catch(async () => {
+                try {
+                  if (countt > 4) return "";
+                  countt++;
+                  return await fetchProxy(fallback_url, fallback_callback);
+                } catch (error) {
+                  alert("Unknown error, Please report the issue" + error);
+                }
+              });
+          });
+      }
+      function parseMUhtml(x) {
+        console.log(x.match('<source src="(.*?)" type="video/mp4"')[1]);
+      }
+      function parseSHhtml(x) {
+        return (
+          eval(
+            x.match("<script type='text/javascript'>eval(.*?).split")[1] +
+              ".split('|')))"
+          ).match('src:"(.*?)master')[1] + "master.m3u8"
+        );
+      }
+      function parseZHhtml(x) {
+        console.log("zh");
+        return eval(
+          x.match("<script type='text/javascript'>eval(.*?).split")[1] +
+            ".split('|')))"
+        ).match('file:"(.*?)"}]')[1];
+      }
+
+      let frame = document.getElementById("iframe");
+      dojo.require("dojox.encoding.ascii85");
+      const iframeInit = () => {
+        resizeIframe(frame);
+        setTimeout(() => {
+          fetch("./lessons/" + lessons[lesson - 1].value.uid + "/moj.msti")
+            .then((e) => e.text())
+            .then((ee) => {
+              var dc = dojox.encoding;
+              let data = JSON.parse(
+                pako.ungzip(dc.ascii85.decode(ee), { to: "string" })
+              );
+              console.log(data);
+              fetch(
+                "./lessons/" + lessons[lesson - 1].value.uid + "/details.json"
+              )
+                .then((f) => f.json())
+                .then((eee) => {
+                  
+                  getIframeWindow(frame).init(
+                    data,
+                    `https://uamedia.uacdn.net/lesson-raw/${eee.fallback_vid.split("lesson-raw/")[1].split('/')[0]}/output.webm`,
+                    lessons[lesson - 1].value.uid
+                  );
+                  /*fetchProxy(
+                    "https://streamhub.gg/e/" + eee.SHid,
+                    parseSHhtml,
+                    "https://lylxan.com/" + eee.ZHid,
+                    parseZHhtml
+                  )
+                    .then((r) => {
+                      getIframeWindow(frame).init(
+                        data,
+                        eee.fallback_vid,
+                        lessons[lesson - 1].value.uid
+                      );
+                    })
+                    .catch((e) => console.log(e));*/
+                });
+            });
+        }, 500);
+      };
+    </script>
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

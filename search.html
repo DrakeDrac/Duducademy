@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duducademy: One place for everthing</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.png" type="image/png" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      let authors;
+      let courses;
+      let lessons;
+      fetch("./data/authors.json")
+        .then((r) => r.json())
+        .then((r) => (authors = r));
+      fetch("./data/courses.json")
+        .then((r) => r.json())
+        .then((r) => (courses = r));
+      fetch("./data/lessons.json")
+        .then((r) => r.json())
+        .then((r) => (lessons = r));
+    </script>
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+
+        <a
+          href="./index.html"
+          class="logo"
+          style="flex-direction: row; display: flex; align-items: center"
+        >
+          <img src="./favicon.png" width="35" alt="Filmlane logo" />
+          <span
+            style="
+              padding-left: 15px;
+              font-size: 25px;
+              color: white;
+              font-weight: bold;
+            "
+          >
+            Duducademy
+          </span>
+        </a>
+
+        <div class="header-actions">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+
+        <button class="menu-open-btn" data-menu-open-btn>
+          <ion-icon name="reorder-two"></ion-icon>
+        </button>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="./index.html" class="logo">
+              <img src="./assets/images/logo.svg" alt="Filmlane logo" />
+            </a>
+
+            <button class="menu-close-btn" data-menu-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="./index.html" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Educators</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Courses</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Batches</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">About</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-social-list">
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <section class="top-rated">
+          <div class="container">
+            <p class="section-subtitle">gu gu ga ga</p>
+
+            <h2 class="h2 section-title">Search Results</h2>
+            <div
+              style="display: flex; flex-direction: row; padding-bottom: 50px"
+            >
+              <input
+                style="
+                  border-radius: 10px;
+                  background-color: hsl(204deg 14.49% 20.04% / 80%);
+                  color: white;
+                  padding: 10px;
+                "
+                id="search"
+                onchange="search(this.value)"
+                placeholder="Search..."
+              />
+              <button
+                class="search-btn"
+                onclick="search('',true)"
+                style="padding: 10px"
+              >
+                <ion-icon
+                  name="search-outline"
+                  role="img"
+                  class="md hydrated"
+                  aria-label="search outline"
+                ></ion-icon>
+              </button>
+            </div>
+            <p class="section-subtitle">Authors</p>
+            <ul id="authors" class="movies-list has-scrollbar"></ul>
+            <p class="section-subtitle">Courses</p>
+            <ul id="courses" class="movies-list has-scrollbar"></ul>
+            <p class="section-subtitle">Lessons</p>
+            <ul id="lessons" class="movies-list has-scrollbar"></ul>
+          </div>
+        </section>
+        <!-- 
+        - #SERVICE
+     
+
+        <section class="service">
+          <div class="container">
+            <div class="service-banner">
+              <figure>
+                <img
+                  src="./assets/images/service-banner.jpg"
+                  alt="HD 4k resolution! only $3.99"
+                />
+              </figure>
+
+              <a
+                href="./assets/images/service-banner.jpg"
+                download
+                class="service-btn"
+              >
+                <span>Download</span>
+
+                <ion-icon name="download-outline"></ion-icon>
+              </a>
+            </div>
+
+            <div class="service-content">
+              <p class="service-subtitle">Our Services</p>
+
+              <h2 class="h2 service-title">
+                Download Your Shows Watch Offline.
+              </h2>
+
+              <p class="service-text">
+                Lorem ipsum dolor sit amet, consecetur adipiscing elseddo
+                eiusmod tempor.There are many variations of passages of lorem
+                Ipsum available, but the majority have suffered alteration in
+                some injected humour.
+              </p>
+
+              <ul class="service-list">
+                <li>
+                  <div class="service-card">
+                    <div class="card-icon">
+                      <ion-icon name="tv"></ion-icon>
+                    </div>
+
+                    <div class="card-content">
+                      <h3 class="h3 card-title">Enjoy on Your TV.</h3>
+
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consecetur adipiscing elit,
+                        sed do eiusmod tempor.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="service-card">
+                    <div class="card-icon">
+                      <ion-icon name="videocam"></ion-icon>
+                    </div>
+
+                    <div class="card-content">
+                      <h3 class="h3 card-title">Watch Everywhere.</h3>
+
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consecetur adipiscing elit,
+                        sed do eiusmod tempor.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+         -->
+      </article>
+    </main>
+
+    <!-- 
+    - #GO TO TOP
+  -->
+
+    <a href="#top" class="go-top" data-go-top>
+      <ion-icon name="chevron-up"></ion-icon>
+    </a>
+
+    <!-- 
+    - custom js link
+  -->
+    <script>
+      async function author(name) {
+        const fuseOptions = {
+          // isCaseSensitive: false,
+          // includeScore: false,
+          // shouldSort: true,
+          // includeMatches: false,
+          // findAllMatches: false,
+          // minMatchCharLength: 1,
+          // location: 0,
+          // threshold: 0.6,
+          // distance: 100,
+          // useExtendedSearch: false,
+          // ignoreLocation: false,
+          // ignoreFieldNorm: false,
+          // fieldNormWeight: 1,
+          limit: 10,
+          keys: ["author.username", "author.first_name", "author.last_name"],
+        };
+
+        const fuse = new Fuse(authors, fuseOptions);
+        let temp = fuse.search(name);
+        temp.length = Math.min(temp.length, 10);
+        return temp;
+      }
+      async function course(name) {
+        const fuseOptions = {
+          limit: 10,
+          keys: ["name"],
+        };
+
+        const fuse = new Fuse(courses, fuseOptions);
+
+        let temp = fuse.search(name);
+        temp.length = Math.min(temp.length, 10);
+        return temp;
+      }
+      async function lesson(name) {
+        const fuseOptions = {
+          limit: 10,
+          keys: ["title"],
+        };
+
+        const fuse = new Fuse(lessons, fuseOptions);
+
+        let temp = fuse.search(name);
+        temp.length = Math.min(temp.length, 10);
+        return temp;
+      }
+
+      function search(query, getQ) {
+        if (getQ) {
+          query = document.getElementById("search").value;
+        }
+        author(query).then((r) => {
+          document.getElementById("authors").innerHTML = "";
+          //src="${`./authors/${element.author.username}.webp`}"
+          for (let index = 0; index < r.length; index++) {
+            const element = r[index];
+            let template = `<li>
+                  <div class="movie-card">
+                    <a href="./author.html?id=${element.item.author.username}">
+                      <figure class="card-banner">
+                        <img
+                          src="./authors/${element.item.author.username}.png"
+                        />
+                      </figure>
+                    </a>
+
+                    <div class="title-wrapper">
+                      <a href="./author.html?id=${
+                        element.item.author.username
+                      }">
+                        <h3 class="card-title">${
+                          element.item.author.first_name +
+                          " " +
+                          element.item.author.last_name
+                        }</h3>
+                      </a>
+                    </div>
+                  </div>
+                </li>`;
+            document.getElementById("authors").innerHTML += template;
+          }
+        });
+        course(query).then((r) => {
+          document.getElementById("courses").innerHTML = "";
+          //src="${`./authors/${element.author.username}.webp`}"
+          for (let index = 0; index < r.length; index++) {
+            const element = r[index];
+            let template = `<li>
+                  <div class="movie-card">
+                    <a href="./course.html?id=${element.item.uid}">
+                      <figure class="card-banner">
+                        <img
+                        src="./authors/${element.item.author_username}.png"
+                        />
+                      </figure>
+                    </a>
+
+                    <div class="title-wrapper">
+                      <a href="./course.html?id=${element.item.uid}">
+                        <h3 class="card-title">${element.item.name}</h3>
+                      </a>
+                    </div>
+                  </div>
+                </li>`;
+            document.getElementById("courses").innerHTML += template;
+          }
+        });
+        lesson(query).then((r) => {
+          document.getElementById("lessons").innerHTML = "";
+          //src="${`./authors/${element.author.username}.webp`}"
+          for (let index = 0; index < r.length; index++) {
+            const element = r[index];
+            let template = `<li>
+                  <div class="movie-card">
+                    <a href="./course.html?id=${element.item.course}&lesson=${element.item.rank}">
+                      <figure class="card-banner">
+                        <img
+                        src="./authors/${element.item.author}.png"
+                        />
+                      </figure>
+                    </a>
+
+                    <div class="title-wrapper">
+                        <a href="./course.html?id=${element.item.course}&lesson=${element.item.rank}">
+                        <h3 class="card-title">${element.item.title}</h3>
+                      </a>
+                    </div>
+                  </div>
+                </li>`;
+            document.getElementById("lessons").innerHTML += template;
+          }
+        });
+      }
+    </script>
+    <script src="./assets/js/script.js"></script>
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

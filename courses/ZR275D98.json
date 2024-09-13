@@ -1,0 +1,240 @@
+{
+  "name": "Excel Course on Geometrical & Wave Optics for JEE 2023: INPHO Foundation",
+  "uid": "ZR275D98",
+  "description": "In this course, Nitin Sachan will provide an in-depth knowledge of Newton's Laws of Motion for students of IIT JEE from Unit I to Unit XXIV. The following topics (Reflection of Light, Basic Laws, etc.) will be discussed in detail. It will be helpful for students preparing for the IIT JEE Exams. The course will be completed in 24 days, comprising 24 classes with a duration of 90 minutes each. The course will be covered in Hindi and notes will be provided in English.",
+  "lessons": {
+    "results": [
+      {
+        "rank": 1,
+        "value": {
+          "uid": "39AE44T2",
+          "description": "",
+          "title": "Reflection of Light: Reflection From a Plane Surface",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 2,
+        "value": {
+          "uid": "1BV50L36",
+          "description": "",
+          "title": "Reflection through Plane Mirrors: Image Formation From Plain Mirror",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 3,
+        "value": {
+          "uid": "YQI501EV",
+          "description": "",
+          "title": "Types & Nature of Images and Objects",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 4,
+        "value": {
+          "uid": "D6RHGQPE",
+          "description": "",
+          "title": "Basic Laws",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 5,
+        "value": {
+          "uid": "PV4XKHUC",
+          "description": "",
+          "title": "Reflection From a Curved Surface & Doubt Clearing Session",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 6,
+        "value": {
+          "uid": "M6XFHYTV",
+          "description": "",
+          "title": "Spherical Mirrors: Image Formation in Convex & Concave Mirror",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 7,
+        "value": {
+          "uid": "JAS0D1JY",
+          "description": "",
+          "title": "Thin & Thick Lenses: Power of a Lens",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 8,
+        "value": {
+          "uid": "3DET2TDI",
+          "description": "",
+          "title": "Refraction at Plane & Spherical Surfaces",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 9,
+        "value": {
+          "uid": "7CBJOFPD",
+          "description": "",
+          "title": "Silvering of Lens",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 10,
+        "value": {
+          "uid": "GZ0H90V7",
+          "description": "",
+          "title": "Concept of Image Forming at Object Itself",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 11,
+        "value": {
+          "uid": "LWH0RHO1",
+          "description": "",
+          "title": "Combination of Lenses & Mirrors",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 12,
+        "value": {
+          "uid": "4UZJ1STL",
+          "description": "",
+          "title": "Prism: Thin Prism",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 13,
+        "value": {
+          "uid": "KVCE4XKK",
+          "description": "",
+          "title": "Dispersion of Light & Doubt Clearing Session",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 14,
+        "value": {
+          "uid": "EE73WUPY",
+          "description": "",
+          "title": "Lens Displacement Method & Doubt Clearing Session",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 15,
+        "value": {
+          "uid": "RUWNESCF",
+          "description": "",
+          "title": "Refraction at Spherical Surfaces",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 16,
+        "value": {
+          "uid": "V3MMWUDI",
+          "description": "",
+          "title": "Huygen's Wave Theory",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 17,
+        "value": {
+          "uid": "IPWW8GGV",
+          "description": "",
+          "title": "Concept of Wavefronts",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 18,
+        "value": {
+          "uid": "40MHVP32",
+          "description": "",
+          "title": "Interference of Light: Coherent Sources",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 19,
+        "value": {
+          "uid": "69C53IGM",
+          "description": "",
+          "title": "Methods for Determining Focal Length of a Convex Lens",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 20,
+        "value": {
+          "uid": "G34GT9OQ",
+          "description": "",
+          "title": "Huygen's Construction & Doubt Clearing Session",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 21,
+        "value": {
+          "uid": "AJKK3DWY",
+          "description": "",
+          "title": "Thin-Film Interference",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 22,
+        "value": {
+          "uid": "IYVTD2P1",
+          "description": "",
+          "title": "Geometrical & Optical Paths: Young's Double-Slit Experiment",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 23,
+        "value": {
+          "uid": "8KCRE93O",
+          "description": "",
+          "title": "YDSE Modifications: Lloyd's Mirror Experiment",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 24,
+        "value": {
+          "uid": "S4A56WDP",
+          "description": "",
+          "title": "Thin Lens & Doubt Clearing Session",
+          "seconds_before_live": 0
+        }
+      },
+      {
+        "rank": 25,
+        "value": {
+          "uid": "D9PSVK73K5",
+          "description": "",
+          "title": "Mega quiz",
+          "seconds_before_live": "2023-06-08T04:30:00Z"
+        }
+      }
+    ]
+  },
+  "author": {
+    "username": "nitinsachan.iitm-2544",
+    "bio": "",
+    "first_name": "Nitin",
+    "last_name": "Sachan"
+  }
+}
